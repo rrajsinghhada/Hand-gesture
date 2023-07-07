@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Feed with Additional Image</title>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #video-feed {
+            width: 50%;
+            height: auto;
+        }
+
+        #additional-image {
+            width: 50%;
+            height: auto;
+        }
+
+        /* Adjust the video feed size */
+        @media (max-width: 800px) {
+            #video-feed {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hand Gesture Recognition(✋👊👎👍🤞✌️)</h1>
+    <div id="container">
+        <img id="video-feed" src="" alt="Video Feed" />
+    </div>
+    <script>
+        // Update the video feed image source
+        function updateVideoFeed() {
+            const videoFeedElement = document.getElementById("video-feed");
+            videoFeedElement.src = "/video_feed";
+        }
+
+        // Refresh the video feed periodically
+        setInterval(updateVideoFeed, 1000); // Adjust the interval as needed
+    </script>
+</body>
+</html>
